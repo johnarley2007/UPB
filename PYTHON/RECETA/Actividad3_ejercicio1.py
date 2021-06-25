@@ -1,0 +1,11 @@
+print("*****************************************************")
+print("Bienvenido, por favor ingrese los datos de la persona")
+print("*****************************************************")
+nIdent = input("Ingrese el documento de identificación : ")
+nombre =input("Ingrese el nombre completo: ")
+edad = int(input("Ingrese la edad: "))
+genero = input("Ingrese el sexo (F o M) tenga en cuenta que M es para masculino y F para femenino: ")
+status = int(input("Ingrese estado civil, 1-Casado, 2-Soltero, 3-Otro: "))
+print()
+if edad > 18 and genero == "F" and status == 2:
+    print(name)
