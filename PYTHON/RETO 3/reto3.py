@@ -35,37 +35,7 @@ try:
                             print("Error2")
                             contador +=1
                             time.sleep=(2)
-                        elif opcion==6:
-                            try:
-                                favorita = int(input("Seleccione opción favorita"))
-                                contador = 0
-                                if favorita < 1 or favorita > 5:
-                                    print("Error3")
-                                    exit()
-                                else:
-                                    try:
-                                        primer_digito = int(input("Número antes del siete: "))
-                                        if primer_digito == 6:
-                                            segundo_digito = int(input("Número que representa la unidad:"))
-                                            if segundo_digito == 1:
-                                                favorita -=1
-                                                temporal = menu[favorita]
-                                                menu.pop(favorita)
-                                                menu.insert(0,temporal)
-                                            else:
-                                                print("Error4")
-                                        else:
-                                            print("Error5")
-                                    except ValueError:
-                                        print("Error6")
-                            except ValueError:
-                                print("Error7")
-                                #exit()
-                        elif opcion >=1 and opcion <=5:
-                            print ("Usted ha elegido la opción "+str(opcion)+"")
-                            #exit()
-                                #Inicio del reto 3
-                            if menu[opcion - 1] == "Cambiar contraseña":
+                        if menu[opcion - 1] == "Cambiar contraseña":
                                 contrasena_2 = (input("Digite la clave actual: "))
                                 if contrasena == contrasena_2:
                                     contrasena_2 = (input("Digite la nueva clave: "))
@@ -135,6 +105,37 @@ try:
                                     except ValueError():
                                         print("Error actualización")
                                         exit()    
+                            elif opcion==6:
+                                try:
+                                    favorita = int(input("Seleccione opción favorita"))
+                                    contador = 0
+                                    if favorita < 1 or favorita > 5:
+                                        print("Error3")
+                                        exit()
+                                    else:
+                                        try:
+                                            primer_digito = int(input("Número antes del siete: "))
+                                            if primer_digito == 6:
+                                                segundo_digito = int(input("Número que representa la unidad:"))
+                                                if segundo_digito == 1:
+                                                    favorita -=1
+                                                    temporal = menu[favorita]
+                                                    menu.pop(favorita)
+                                                    menu.insert(0,temporal)
+                                                else:
+                                                    print("Error4")
+                                            else:
+                                                print("Error5")
+                                        except ValueError:
+                                            print("Error6")
+                                except ValueError:
+                                    print("Error7")
+                                #exit()
+                        elif opcion >=1 and opcion <=5:
+                            print ("Usted ha elegido la opción "+str(opcion)+"")
+                            #exit()
+                                #Inicio del reto 3
+                            
                         elif opcion == 7:
                             print("Hasta pronto")
                     except ValueError:
